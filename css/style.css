@@ -1,0 +1,734 @@
+/* ここから下に記載していく */
+
+@charset "utf-8";
+
+body {
+    width: 1200px;
+    margin: auto;
+    padding: 0 100px;
+    padding-top: 100px;
+    background-color: #fffccc;            /* 背景色 */
+    background-image: url("../img/bg__2.jpg"); /* 画像 */
+    background-size: cover;               /* 全画面 */
+    background-attachment: fixed;         /* 固定 */
+    background-position: center center;   /* 縦横中央 */
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+}
+
+/* header内のCSS */
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    /* fixedを使うと、常に位置が固定なの？それとも、メディアクエリ使うの？ */
+    top: 0;
+    left: 0;
+    background-color: white;
+    align-items: center;
+    margin: auto;
+    padding: 0 100px;
+    z-index: 1;
+}
+
+.header__contents {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.mainlogo img {
+    width: auto;
+    height: 68px;
+    margin: 16px 24px;
+}
+
+.navi {
+    margin: 40px 0;
+}
+
+.navis {
+    display: flex;
+}
+
+.navis a {
+    padding: 4px;
+    margin: 0px 25px;
+    font-size: 16px;
+    display: flex;
+}
+
+/* 残念 */
+/* .fa {
+    font-size: 24px;
+} */
+
+/* 残念ながらいらなくなった */
+/* .menu__icon {
+    display: none;
+} */
+
+/* aタグのダサい下線を消す処理 */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* main内 */
+
+main {
+    width: 100%;
+}
+
+.main__contents {
+    width: 1200px;
+    height: 3000px;
+}
+
+.top__visual {
+    width: 1200px;
+    height: 450px;
+    position: relative;
+    display: block;
+}
+
+.top__visual img {
+    width: 1200px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.top__text {
+    position: absolute;/*絶対配置*/
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto 0;
+    padding: 0;
+    text-align: center;
+    font-family: serif;
+
+}
+
+.stella span {
+    font-size: 44px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: serif;
+}
+
+    /* テキストアニメーション */
+.title {
+    position: absolute;/*絶対配置*/
+    color: white;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto 0;
+    padding: 20px 0;
+    text-align: center;
+
+    display: flex;
+    overflow: hidden;
+}
+
+.title span {
+    display: block;
+    transform: translate(0, 170%);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.title.-visible span {
+    transform: translate(0, 0);
+  }
+  
+  .title span:nth-child(2) {
+    transition-delay: 0.06s;
+  }
+  .title span:nth-child(3) {
+    transition-delay: 0.12s;
+  }
+  .title span:nth-child(4) {
+    transition-delay: 0.18s;
+  }
+  .title span:nth-child(5) {
+    transition-delay: 0.24s;
+  }
+  .title span:nth-child(6) {
+    transition-delay: 0.30s;
+  }
+  .title span:nth-child(7) {
+    transition-delay: 0.36s;
+  }
+  .title span:nth-child(8) {
+    transition-delay: 0.42s;
+  }
+  .title span:nth-child(9) {
+    transition-delay: 0.48s;
+  }
+  .title span:nth-child(10) {
+    transition-delay: 0.54s;
+  }
+  .title span:nth-child(11) {
+    transition-delay: 0.6s;
+  }
+  .title span:nth-child(12) {
+    transition-delay: 0.66s;
+  }
+  .title span:nth-child(13) {
+    transition-delay: 0.72s;
+  }
+  .title span:nth-child(14) {
+    transition-delay: 0.78s;
+  }
+
+    /* テキストアニメーション終わり */
+
+.top__visual img {
+    width: 100%;
+}
+
+/* 授業で取り組んだところをやろうとした */
+/* .top__visual { 
+    background-image: url(../img/mainbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 450px;
+}  */
+
+.top__text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+
+.top__text p {
+    font-size: 28px;
+    width: 1200px;
+}
+
+
+/* こっからABOUT */
+
+.about {
+    padding: 60px 0;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.about__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+    display: block;
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+
+.about__texts span {
+    background: linear-gradient(transparent 40%, yellow 40%);
+}
+
+.at1 {
+    padding-top: 30px;
+}
+
+.at2 {
+    padding-top: 60px;
+}
+
+.at3 {
+    padding-top: 10px;
+}
+
+.at4 {
+    padding-top: 40px;
+}
+
+.at5 {
+    padding-top: 40px;
+}
+
+.at6 {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+
+.about__pics {
+    display: flex;
+}
+
+.about__pics img {
+    flex: auto;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ここからコース */
+
+.course {
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+}
+
+.course__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+    display: block;
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+.course__text {
+    font-size: 20px;
+    color: gray;
+}
+
+.course__text1 {
+    padding-top: 30px;
+}
+
+.course__text2 {
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.content {
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    background-color: #fafafa;
+    opacity: 0;
+}
+
+/* フワッとなるやつを実装 */
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+
+.c__image img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius:35px;
+    box-shadow: 5px 10px 50px rgba(0, 0, 0, 0.2);
+    animation: bound .3s ease infinite alternate;
+}
+
+@keyframes bound{
+    0%    {transform: translateY(0px);}
+    100%  {transform: translateY(-10px);}
+  }
+
+
+
+.c__text {
+    text-align: center;
+    margin: auto 0;
+    padding-left: 50px;
+    padding-right: 200px;
+}
+
+.c2 {
+    flex-direction: row-reverse;
+}
+
+.c2t {
+    padding-left: 200px;
+    padding-right: 50px;
+}
+
+.ct__title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+
+.ct__para {
+    font-size: 14px;
+    color: gray;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+/* こっからニュース */
+
+.news {
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+
+}
+
+.news__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    display: block;
+    padding-top: 100px;
+}
+
+.news__contents {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.news__content {
+    width: 300px;
+    height: 350px;
+    padding: 0 15px;
+}
+
+.news__content img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news__text {
+    text-align: left;
+    color: gray;
+    line-height: 20px;
+    font-size: 16px;
+    padding-top: 30px;
+}
+
+.date {
+    padding-bottom: 20px;
+}
+
+.btn {
+    width: 300px;
+    height: 60px;
+    font-size: 16px;
+    background-color: #ffd61a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+}
+
+.btn:hover {
+    background-color: red;
+}
+
+/* こっからアクセス */
+
+.access {
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+    background-color: #fafafa;
+    padding-bottom: 60px;
+}
+
+.access__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    display: block;
+    padding-top: 100px;
+
+}
+
+.coop__title {
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+iframe {
+    border: none;
+    width: auto;
+    height: 250px;
+    padding-bottom: 60px;
+}
+
+.iframe__map iframe {
+    border: none;
+    width: 1200px;
+    height: 250px;
+    padding-bottom: 60px;
+}
+
+.coop__texts {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.info__list {
+    padding-left: 200px;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.info__exp {
+    padding-left: 50px;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+/* こっからお問合せ */
+
+.contact {
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+
+}
+
+.contact__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    display: block;
+    padding-top: 100px;
+}
+
+.contact__text {
+    color: gray;
+    font-size: 20px;
+}
+
+.exp1 {
+    padding-bottom: 60px;
+}
+
+.exp2 {
+    padding-bottom: 10px;
+}
+
+.exp3 {
+    padding-bottom: 30px;
+}
+
+.exp4 {
+    padding-bottom: 10px;
+}
+
+.exp5 {
+    padding-bottom: 70px;
+}
+
+.contact__table {
+    width: 100%;
+    margin-bottom: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.contact__item {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: middle;
+    width: 30%;
+    background-color: #eee;
+    
+}
+
+.contact__body {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 70%;
+    text-align: left;
+}
+
+.form-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 400px;
+}
+
+.form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-skill {
+    display: block;
+}
+
+.contact-skill + .contact-skill {
+    margin-top: 10px;
+}
+
+.contact-skill-txt {
+    margin-left: 5px;
+}
+
+.form-textarea {
+    width: 540px;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.contact-submit {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 100vh;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* 地球儀 */
+
+.earth {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow: -20px 0 3px rgba(6, 69, 185, 0.3) inset;
+    margin: 50px auto;
+  }
+  
+  .earth:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-image: url(https://drive.google.com/uc?export=view&id=11chGBx0vAj79X4ph_fUXDQIYdRy9uqBV);
+    background-position: 0 0;
+    background-size: auto 100%;
+    transform: rotate(23.4deg);
+    animation: rotation 16s linear infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes rotation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+.earth__text {
+    font-size: 24px;
+    color: gray;
+    font-weight: bold;
+    text-align: center;
+}
+
+.earth__next {
+    display: block;
+}
+
+/* スタート画面の処理 */
+
+.start {
+	background: rgb(132, 161, 255);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+/* 画像を貼る場合の処理を知りたいですね */
+
+
+
+/*  ここからフッター　*/
+
+footer {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #707070;
+    margin-top: 140px;
+    margin-bottom: 200px;
+    padding: 40px 0;
+    bottom: 0;
+}
+
+footer h5 {
+    text-align: center;
+    color: white;
+}
+
